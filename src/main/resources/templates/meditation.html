@@ -7,12 +7,14 @@
 </head>
 <body>
     <h1>Relax and Meditate</h1>
-    <p class="timer">Meditation Time: <span id="meditation-time" th:text="${session.durationInMinutes}">0</span> minutes</p>
+	<span th:text="${obj.durationInMinutes}">2</span>
+    <p class="timer">Meditation Time: <span id="meditation-time" th:text="${obj.durationInMinutes}">0</span> minutes</p>
     <p class="music-info">Playing relaxing music for your session...</p>
 	
     <script>
         // Example: Timer Countdown Script
         const meditationTime = document.getElementById("meditation-time").textContent;
+		console.log("init",meditationTime)
         let timeLeft = parseInt(meditationTime) * 60;
 
         function countdown() {

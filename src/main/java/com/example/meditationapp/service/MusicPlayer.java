@@ -37,10 +37,10 @@ public class MusicPlayer {
                 e.printStackTrace();
             }
         });
-        
+       
         musicThread.setDaemon(true); // アプリケーション終了時にスレッドを強制停止
         musicThread.start();
-
+        System.out.println("thread " + musicThread.threadId());
         } catch (Exception e) {
         	System.err.println("音楽ファイルの読み込み中にエラー: " + e.getMessage());
         	e.printStackTrace();

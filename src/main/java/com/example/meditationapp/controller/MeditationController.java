@@ -36,6 +36,7 @@ public class MeditationController {
     public String startMeditation(@RequestParam("duration") int duration, Model model) {
         // MeditationSessionの作成と保存
         MeditationSession session = new MeditationSession();
+        
         session.setDurationInMinutes(duration);
         service.saveSession(session);
         System.out.println("瞑想セッション開始: " + duration + " 分");
@@ -51,7 +52,7 @@ public class MeditationController {
         
         
         // モデルにセッション情報を追加し、meditation.htmlを返す
-        model.addAttribute("session", session);
+        model.addAttribute("obj", session);
         return "meditation";
     }
     
