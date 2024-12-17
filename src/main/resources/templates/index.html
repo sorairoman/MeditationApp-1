@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Meditation Timer</title>
+</head>
+<body>
+    <h1>Start Your Meditation Session</h1>
+    <form action="/start" method="post">
+        <label for="duration">Meditation Duration (minutes):</label><br>
+        <input type="number" id="duration" name="duration" min="1" required><br>
+        <button type="submit">Start Meditation</button>	
+    </form>
+</body>
+</html>

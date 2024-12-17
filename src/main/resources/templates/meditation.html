@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Meditation Session</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Relax and Meditate</h1>
+    <p class="timer">Meditation Time: <span id="meditation-time" th:text="${session.durationInMinutes}">0</span> minutes</p>
+    <p class="music-info">Playing relaxing music for your session...</p>
+	
+    <script>
+        // Example: Timer Countdown Script
+        const meditationTime = document.getElementById("meditation-time").textContent;
+        let timeLeft = parseInt(meditationTime) * 60;
+
+        function countdown() {
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                alert("Meditation session completed!");
+            } else {
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                document.querySelector(".timer").textContent = `Time Left: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+                timeLeft--;
+            }
+        }
+
+        const timer = setInterval(countdown, 1000);
+    </script>
+</body>
+</html>
