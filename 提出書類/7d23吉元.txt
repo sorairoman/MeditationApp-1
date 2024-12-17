@@ -1,4 +1,4 @@
-【吉元美咲】※ファイル名も
+【吉元美咲】
 https://github.com/sorairoman?tab=repositories
 
 ■夢占いアプリ/dreamapp
@@ -7,5 +7,5 @@ https://github.com/sorairoman/dreamapp.git
 ■お天気アプリ/WeatherApp
 https://github.com/sorairoman/WeatherApp.git
 
-■瞑想アプリ
+■瞑想アプリ/MeditationApp-1
 https://github.com/sorairoman/MeditationApp-1.git
